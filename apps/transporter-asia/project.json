@@ -1,0 +1,24 @@
+{
+  "name": "transporter-asia",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/transporter-asia/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "transporter-asia:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "transporter-asia:build:development"
+        },
+        "production": {
+          "buildTarget": "transporter-asia:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
